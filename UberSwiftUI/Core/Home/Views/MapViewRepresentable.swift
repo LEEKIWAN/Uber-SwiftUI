@@ -48,7 +48,7 @@ extension MapViewRepresentable {
             let region = MKCoordinateRegion(center: .init(latitude: userLocation.coordinate.latitude, longitude: userLocation.coordinate.longitude),
                                             span: .init(latitudeDelta: 0.05, longitudeDelta: 0.05))
             
-            print(userLocation.location)
+//            print(userLocation.location)
             
             parent.mapView.setRegion(region, animated: true)
         }
