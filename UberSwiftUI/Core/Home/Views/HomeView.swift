@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     
+    
     @State private var isShownLocationSearchView = false
     
     var body: some View {
@@ -17,7 +18,7 @@ struct HomeView: View {
                 .ignoresSafeArea()
             
             if isShownLocationSearchView {
-                LocationSearchView()
+                LocationSearchView(isShownLocationSearchView: $isShownLocationSearchView)
             } else {
                 LocationSearchActivationView()
                     .padding(.top, 70)

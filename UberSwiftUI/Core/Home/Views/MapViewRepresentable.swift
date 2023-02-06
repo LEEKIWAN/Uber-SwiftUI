@@ -14,7 +14,7 @@ struct MapViewRepresentable: UIViewRepresentable {
     let mapView: MKMapView = MKMapView()
 //    let locationManager = LocationManager()
     
-    
+    @EnvironmentObject var locationViewModel: LocationSearchViewModel
     
     func makeUIView(context: Context) -> MKMapView {
         mapView.isRotateEnabled = false
@@ -26,7 +26,10 @@ struct MapViewRepresentable: UIViewRepresentable {
     }
     
     func updateUIView(_ uiView: MKMapView, context: Context) {
-        
+        if let coordinate = locationViewModel.selectedLocationCoordinate {
+            print("DEBUG: Selected Location in map view \(coordinate)")
+            
+        }
     }
 
     func makeCoordinator() -> Coordinator {

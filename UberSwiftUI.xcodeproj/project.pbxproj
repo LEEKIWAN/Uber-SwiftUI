@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8336F6FF299092FA00A28EF8 /* LocationSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336F6FE299092FA00A28EF8 /* LocationSearchView.swift */; };
 		8336F7012990969600A28EF8 /* LocationSearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336F7002990969600A28EF8 /* LocationSearchResultCell.swift */; };
+		8336F7032990A54600A28EF8 /* LocationSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336F7022990A54600A28EF8 /* LocationSearchViewModel.swift */; };
 		83994885298904BF0072DA64 /* UberSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83994884298904BF0072DA64 /* UberSwiftUIApp.swift */; };
 		83994889298904C00072DA64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83994888298904C00072DA64 /* Assets.xcassets */; };
 		8399488C298904C00072DA64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8399488B298904C00072DA64 /* Preview Assets.xcassets */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		8336F6FE299092FA00A28EF8 /* LocationSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchView.swift; sourceTree = "<group>"; };
 		8336F7002990969600A28EF8 /* LocationSearchResultCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchResultCell.swift; sourceTree = "<group>"; };
+		8336F7022990A54600A28EF8 /* LocationSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSearchViewModel.swift; sourceTree = "<group>"; };
 		83994881298904BF0072DA64 /* UberSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83994884298904BF0072DA64 /* UberSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberSwiftUIApp.swift; sourceTree = "<group>"; };
 		83994888298904C00072DA64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 		839948A32989F0F40072DA64 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8336F7022990A54600A28EF8 /* LocationSearchViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -249,6 +252,7 @@
 				839948A02989079F0072DA64 /* LocationManager.swift in Sources */,
 				839948A82989F24A0072DA64 /* UIScreen+.swift in Sources */,
 				83994885298904BF0072DA64 /* UberSwiftUIApp.swift in Sources */,
+				8336F7032990A54600A28EF8 /* LocationSearchViewModel.swift in Sources */,
 				8399489E298905630072DA64 /* MapViewRepresentable.swift in Sources */,
 				8399489C298905470072DA64 /* HomeView.swift in Sources */,
 				8336F6FF299092FA00A28EF8 /* LocationSearchView.swift in Sources */,

@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct LocationSearchActivationView: View {
+    @EnvironmentObject var viewModel: LocationSearchViewModel
+    
     var body: some View {
         HStack {
             Rectangle()

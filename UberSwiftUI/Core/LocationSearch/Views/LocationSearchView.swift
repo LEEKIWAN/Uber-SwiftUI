@@ -12,6 +12,10 @@ struct LocationSearchView: View {
     @State private var startLocationText = ""
     @State private var destinationLocationText = ""
     
+    @Binding var isShownLocationSearchView: Bool
+    
+    @EnvironmentObject var viewModel: LocationSearchViewModel
+    
     var body: some View {
         VStack {
             HStack {
@@ -32,7 +36,7 @@ struct LocationSearchView: View {
                         .frame(height: 32)
                         .background(Color(.systemGroupedBackground))
                     
-                    TextField("Where to?", text: $destinationLocationText)
+                    TextField("Where to?", text: $viewModel.queryFragment)
                         .frame(height: 32)
                         .background(Color(.systemGray4))
                     
@@ -46,8 +50,12 @@ struct LocationSearchView: View {
             
             ScrollView {
                 VStack {
-                    ForEach(0 ..< 20) { _ in
-                        LocationSearchResultCell()
+                    ForEach(viewModel.results, id: \.self) { result in
+                        LocationSearchResultCell(title: result.title, subtitle: result.subtitle)
+                            .onTapGesture {
+                                isShownLocationSearchView.toggle()
+                                viewModel.selectLocation(result)
+                            }
                     }
                 }
             }
@@ -58,7 +66,7 @@ struct LocationSearchView: View {
 
 struct LocationSearchView_Previews: PreviewProvider {
     static var previews: some View {
-        LocationSearchView()
+        LocationSearchView(isShownLocationSearchView: .constant(true))
             
     }
 }
