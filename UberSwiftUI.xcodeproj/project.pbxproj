@@ -13,6 +13,8 @@
 		8336F7052990E6F000A28EF8 /* MapViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336F7042990E6F000A28EF8 /* MapViewState.swift */; };
 		8336F7082991DC7C00A28EF8 /* RideRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336F7072991DC7C00A28EF8 /* RideRequestView.swift */; };
 		8336F70A2991F16900A28EF8 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336F7092991F16900A28EF8 /* UIView+.swift */; };
+		8336F70C2992164900A28EF8 /* RideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336F70B2992164900A28EF8 /* RideType.swift */; };
+		8336F70E29922DEA00A28EF8 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8336F70D29922DEA00A28EF8 /* Double+.swift */; };
 		83994885298904BF0072DA64 /* UberSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83994884298904BF0072DA64 /* UberSwiftUIApp.swift */; };
 		83994889298904C00072DA64 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 83994888298904C00072DA64 /* Assets.xcassets */; };
 		8399488C298904C00072DA64 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8399488B298904C00072DA64 /* Preview Assets.xcassets */; };
@@ -31,6 +33,8 @@
 		8336F7042990E6F000A28EF8 /* MapViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewState.swift; sourceTree = "<group>"; };
 		8336F7072991DC7C00A28EF8 /* RideRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideRequestView.swift; sourceTree = "<group>"; };
 		8336F7092991F16900A28EF8 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		8336F70B2992164900A28EF8 /* RideType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideType.swift; sourceTree = "<group>"; };
+		8336F70D29922DEA00A28EF8 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		83994881298904BF0072DA64 /* UberSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UberSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		83994884298904BF0072DA64 /* UberSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UberSwiftUIApp.swift; sourceTree = "<group>"; };
 		83994888298904C00072DA64 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -123,6 +127,7 @@
 			children = (
 				839948A72989F24A0072DA64 /* UIScreen+.swift */,
 				8336F7092991F16900A28EF8 /* UIView+.swift */,
+				8336F70D29922DEA00A28EF8 /* Double+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				8336F7042990E6F000A28EF8 /* MapViewState.swift */,
+				8336F70B2992164900A28EF8 /* RideType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -270,9 +276,11 @@
 				839948A82989F24A0072DA64 /* UIScreen+.swift in Sources */,
 				83994885298904BF0072DA64 /* UberSwiftUIApp.swift in Sources */,
 				8336F7032990A54600A28EF8 /* LocationSearchViewModel.swift in Sources */,
+				8336F70E29922DEA00A28EF8 /* Double+.swift in Sources */,
 				8399489E298905630072DA64 /* MapViewRepresentable.swift in Sources */,
 				8336F7052990E6F000A28EF8 /* MapViewState.swift in Sources */,
 				8399489C298905470072DA64 /* HomeView.swift in Sources */,
+				8336F70C2992164900A28EF8 /* RideType.swift in Sources */,
 				8336F6FF299092FA00A28EF8 /* LocationSearchView.swift in Sources */,
 				8336F7082991DC7C00A28EF8 /* RideRequestView.swift in Sources */,
 				8336F7012990969600A28EF8 /* LocationSearchResultCell.swift in Sources */,

@@ -12,7 +12,7 @@ import MapKit
 struct MapViewRepresentable: UIViewRepresentable {
     
     let mapView: MKMapView = MKMapView()
-//    let locationManager = LocationManager()
+    let locationManager = LocationManager.shared
     
     @Binding var mapState: MapViewState
     @EnvironmentObject var locationViewModel: LocationSearchViewModel
@@ -93,6 +93,7 @@ extension MapViewRepresentable {
         
         func configurePolyline(withDestinationCoordinate coordinate: CLLocationCoordinate2D) {
             guard let userLocationCoordinate = userLocationCoordinate else { return }
+            parent.mapView.removeOverlays(parent.mapView.overlays)
             
             getDestinationRoute(from: userLocationCoordinate, to: coordinate) { route in
                 self.parent.mapView.addOverlay(route.polyline)

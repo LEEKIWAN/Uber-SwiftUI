@@ -11,12 +11,12 @@ import MapKit
 class LocationSearchViewModel: NSObject, ObservableObject {
     @Published var results: [MKLocalSearchCompletion] = []
     @Published var selectedLocationCoordinate: CLLocationCoordinate2D?
+    var userLocation: CLLocationCoordinate2D?
     
     private var searchCompleter = MKLocalSearchCompleter()
     
     var queryFragment: String = "" {
-        didSet {
-//            print("DEBUG: Query fragment is \(queryFragment)")
+        didSet {            
             searchCompleter.queryFragment = queryFragment
         }
     }
@@ -42,7 +42,6 @@ class LocationSearchViewModel: NSObject, ObservableObject {
             
             self.selectedLocationCoordinate = coordinate
         }
-        
     }
     
     func locationSearch(forLocalSearchCompletion localSearch: MKLocalSearchCompletion, completion: @escaping MKLocalSearch.CompletionHandler) {
@@ -52,6 +51,19 @@ class LocationSearchViewModel: NSObject, ObservableObject {
         let search = MKLocalSearch(request: searchRequest)
         
         search.start(completionHandler: completion)
+    }
+    
+    func calculateRidePrice(forType type: RideType) -> Double {
+        guard let destCoordinate = selectedLocationCoordinate else { return 0 }
+        guard let userCoordinate = userLocation else { return 0 }
+        
+        let userLocation = CLLocation(latitude: userCoordinate.latitude, longitude: userCoordinate.longitude)
+        let destLocation = CLLocation(latitude: destCoordinate.latitude, longitude: destCoordinate.longitude)
+        
+        let tripDistanceInMeters = userLocation.distance(from: destLocation)
+        
+        
+        return type.calculatePrice(for: tripDistanceInMeters)
     }
 }
 
